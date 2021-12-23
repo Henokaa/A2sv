@@ -1,0 +1,1 @@
+{"name":"Local: test","url":"c:\\Users\\Henok F\\Desktop\\A2sv\\test.py","tests":[{"id":1640103050857,"input":"2\nHarsh 25 26.5 28\nAnurag 26 28 30\nHarsh","output":"26.50"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Henok F\\Desktop\\A2sv\\test.py","group":"local","local":true}
