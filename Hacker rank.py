@@ -27,4 +27,14 @@ data = set()
 for i in range(0, length):
     data.add(input())
     
-print len(data)
+print (len(data))
+
+# set.union 
+
+n=input()
+s1=set(map(int, input().split()))
+n=input()
+s2=set(map(int, input().split()))
+print (len(s1.union(s2)))
+
+
