@@ -37,4 +37,8 @@ n=input()
 s2=set(map(int, input().split()))
 print (len(s1.union(s2)))
 
+# check sumbit
+for _ in range(int(input())):
+    x, a, z, b = input(), set(input().split()), input(), set(input().split())
+    print(a.issubset(b))
 
