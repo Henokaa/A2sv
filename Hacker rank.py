@@ -19,3 +19,12 @@ def split_and_join(line):
     line = "-".join(line);
     return line
 if __name__ == '__main__':
+
+# set.add()
+length = int(input())
+data = set()
+
+for i in range(0, length):
+    data.add(input())
+    
+print len(data)

@@ -1,5 +1,5 @@
-s = "hello world"
-for x in s[:].split():
-    print(x)
-    s = s.replace(x, x.capitalize())
-print (s)
+x = input() 
+print(x)         #' insert 0 5     '
+print(x.strip())  #'insert 0 5'
+print(x.strip().split())  #['insert', '0', '5'
+print(x.split())
