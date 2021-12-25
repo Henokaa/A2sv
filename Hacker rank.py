@@ -42,3 +42,9 @@ for _ in range(int(input())):
     x, a, z, b = input(), set(input().split()), input(), set(input().split())
     print(a.issubset(b))
 
+# itertools.product
+from itertools import product
+a = map(int, input().split())
+b = map(int, input().split())
+
+print(*product(a, b))
