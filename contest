@@ -24,6 +24,22 @@ def triangle(n):
 n = 5
 triangle(n) 
 
+#q1 b answer
+# Function to demonstrate printing pattern
+def pypart(n):
+     
+    for i in range(0, n):
+     
+        for j in range(0, i+1):
+         
+            # printing stars
+            print("* ",end="")
+      
+        # ending line after each row
+        print("\r")
+ 
+n = 5
+pypart(n)
 
 #q2 answer
 rows = 4
