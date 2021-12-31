@@ -1,5 +1,5 @@
-def triangle(n): 
-      
+#q1 a answer
+def triangle(n):      
     # number of spaces 
     k = 2*n - 2
   
@@ -23,3 +23,118 @@ def triangle(n):
 ") 
 n = 5
 triangle(n) 
+
+
+#q2 answer
+rows = 4
+for i in range(1, rows + 1):
+    print("*" * i, end="")
+    print(" " * ((rows - i) * 2), end="")
+    print("*" * i)
+    
+#q3 a answer
+N = int(input())
+for _ in range(2):
+    for i in range(1, N+1):
+        if N == 1:
+            print("#", end = " ")
+        else:
+            print("#" * (N -1), end = " ")
+    print()
+    
+#q4 a answer
+rows = 3
+for i in range(1, rows + 1):
+    print(" " * (rows - i), end=" ")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for k in list(reversed(range(1, i))):
+        print(k, end="")
+    print()
+    
+#q4 b answer
+rows = 3
+for i in range(1, rows + 1):
+    print(" " * (rows - i), end=" ")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for k in list(reversed(range(1, i))):
+        print(k, end="")
+    print()
+
+# second for loop to print the lower section of the diamond
+for i in range(rows -1, 0, -1):
+    print(" " * (rows - i), end=" ")
+    for j in range(1, i + 1):
+        print(j, end="")
+    for k in list(reversed(range(1, i))):
+        print(k, end="")
+    print()
+   
+   
+# q4 c answer
+for i in range(1, 26):
+    if i % 2 == 0:
+        print(" " *2, end="")
+    else:
+        print("#" * 2, end="")
+    
+    if(i % 5 == 0):
+        print()
+       
+       
+#q5 a answer
+alphabetDict = {}
+for i in range(65, 91):
+    alphabetDict[chr(i)] =  (26 - (90 - ord(chr(i))))
+
+letter = input("Enter a word: ")
+value = 0
+letter = list(reversed(letter))
+for i in range(len(letter)):
+    print(letter[i])
+    value += pow(26, i) * alphabetDict[letter[i]]
+print(value)
+
+#q5 b answer
+number = int(input("Enter number: "))
+string = []
+while(number != 0):
+    remainder = number % 26
+    string.append(chr(remainder + 64))
+    number = number // 16
+
+print("".join(reversed(string)))
+
+
+#q6 a answer
+nums = list(map(int, input().split()))
+num = sorted(nums)
+for _ in range(num.count(0)):
+    nums.remove(0)
+zero = [0] * num.count(0)
+nums  = nums + zero
+print(nums)
+
+
+#q7 answer
+romanNumber = {
+    "I":1,
+    "V":5,
+    "X":10,
+    "L":50,
+    "C":100,
+    "D":500,
+    "M":1000
+}
+
+total = 0
+romanValue = input()
+for i in range(1,len(romanValue)):
+    if romanNumber[romanValue[i-1]] < romanNumber[romanValue[i]]:
+        total -= romanNumber[romanValue[i-1]]
+    else:
+        total += romanNumber[romanValue[i-1]]
+    
+total+=romanNumber[romanValue[-1]] #adding the last digit to resul
+print(total)
